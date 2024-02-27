@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --background: #f5f5f5;
+    --borda_cinza: #474747;
+}
+
+body {
+    margin: 0 100px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: var(--borda_cinza);
+    font-size: 40px;
+    align-items: center;
+}
+
+.adicionaCategoria {
+    display: flex;
+    margin-top: 20px;
+    border: 1.5px solid var(--borda_cinza);
+    border-radius: 10px;
+    padding: 10px 12px;
+    width: 200px;
+}
+
+.campoTexto[type="text"] {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    width: 165px;
+    padding-right: 10px;
+    font-weight: 300;
+}
+
+.campoTexto:focus {
+    outline: none;
+}
+
+.imgAdicionar {
+    width: 25px;
+    height: 25px;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cadaCategoria {
+    margin: 0 30px;
+}
+
+.tituloCategoria {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--borda_cinza);
+    color: var(--background);
+}
+
+.headerCategoria {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--borda_cinza);
+}
+
+.imgDeletar {
+    width: 25px;
+    height: 25px;
+    background-color: var(--borda_cinza);
+}
+
+
+
+
+/* 
+
+
+
+.li {
+    list-style: none;
+}
+
+
+
+.lixeira {
+    padding-top: 4px;
+    width: 1x;
+    height: 10px;
+}
+
+.botaoDelete {
+    border: none;
+}
+
+
+
+
+ */
+
+/* 
+
+
+ 
+
+.adicionaCategoria {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1.5px solid var(--borda_cinza);
+    border-radius: 10px;
+    padding: 10px 12px;
+    width: 200px;
+    
+}
+
+.campo_texto[type="text"] {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    width: 165px;
+    padding-right: 10px;
+    font-weight: 300;
+}
+
+.campo_texto:focus {
+    outline: none;
+}
+
+.imgAdicionar {
+    width: 25px;
+    height: 25px;
+}
+
+.botaoAdicionar {
+    border: none;
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-between;
+}
+
+.li {
+    list-style: none;
+}
+
+
+
+.lixeira {
+    width: 18px;
+    height: 20px;
+    background-color: var(--borda_cinza);
+}
+
+.botaoDelete {
+    border: none;
+    padding: 0px 0px;
+}
+
+.headerCategoria{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--borda_cinza);
+    width: 320px;
+    padding: 20px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--background);
+} */

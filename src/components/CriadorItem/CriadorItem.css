@@ -14,12 +14,11 @@
 
 .adicionaCategoria {
     display: flex;
-    margin-bottom: 30px;
+    margin-top: 20px;
     border: 1.5px solid var(--borda_cinza);
     border-radius: 10px;
     padding: 10px 12px;
     width: 200px;
-    
 }
 
 .campo_texto[type="text"] {
@@ -37,6 +36,7 @@
 }
 
 .imgAdicionar {
+    padding-top: 4px;
     width: 25px;
     height: 25px;
 }
@@ -57,33 +57,21 @@
 .tituloCategoria {
     font-size: 20px;
     font-weight: 600;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    background-color: var(--borda_cinza);
 }
 
 .lixeira {
-    width: 18px;
-    height: 20px;
-    background-color: var(--borda_cinza);
+    padding-top: 4px;
+    width: 1x;
+    height: 10px;
 }
 
 .botaoDelete {
     border: none;
-    padding: 0px 0px;
 }
 
-.headerCategoria{
+.tituloCategoria{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
-    background-color: var(--borda_cinza);
-    width: 320px;
-    padding: 20px 20px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    color: var(--background);
 }
 
