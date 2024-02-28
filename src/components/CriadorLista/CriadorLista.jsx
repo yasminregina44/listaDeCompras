@@ -58,8 +58,8 @@ export default function Lista() {
                 <div className="header">
                     <h1 className='titulo'>Lista de Compras</h1>
                     <div className="adicionaCategoria">
-                        <input className="campoTexto" type="text" placeholder="Adicionar Lista" value={nomeLista} onInput={event => setNomeLista(event.target.value)} onKeyPress={enterKey} />
-                        <img className="imgAdicionar" src="../src/assets/adicionarCinza.png" alt="Adicionar" onClick={adicionarLista} />
+                        <input className="campoTextoCategoria" type="text" placeholder="Adicionar Lista" value={nomeLista} onInput={event => setNomeLista(event.target.value)} onKeyPress={enterKey} />
+                        <img className="imgAdicionarCategoria" src="../src/assets/adicionarCinza.png" alt="Adicionar" onClick={adicionarLista} />
                     </div>
                 </div>
             </div>

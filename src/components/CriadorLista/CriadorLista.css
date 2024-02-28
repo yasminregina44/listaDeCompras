@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .titulo {
@@ -40,7 +41,7 @@ body {
     width: 200px;
 }
 
-.campoTexto[type="text"] {
+.campoTextoCategoria[type="text"] {
     display: flex;
     border: none;
     background-color: transparent;
@@ -50,11 +51,11 @@ body {
     font-weight: 300;
 }
 
-.campoTexto:focus {
+.campoTextoCategoria:focus {
     outline: none;
 }
 
-.imgAdicionar {
+.imgAdicionarCategoria {
     width: 25px;
     height: 25px;
 }
@@ -65,6 +66,7 @@ body {
     list-style: none;
     width: 100%;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .cadaCategoria {
@@ -83,111 +85,13 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: var(--borda_cinza);
+    padding: 10px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .imgDeletar {
-    width: 25px;
-    height: 25px;
-    background-color: var(--borda_cinza);
-}
-
-
-
-
-/* 
-
-
-
-.li {
-    list-style: none;
-}
-
-
-
-.lixeira {
-    padding-top: 4px;
-    width: 1x;
-    height: 10px;
-}
-
-.botaoDelete {
-    border: none;
-}
-
-
-
-
- */
-
-/* 
-
-
- 
-
-.adicionaCategoria {
-    display: flex;
-    margin-bottom: 30px;
-    border: 1.5px solid var(--borda_cinza);
-    border-radius: 10px;
-    padding: 10px 12px;
-    width: 200px;
-    
-}
-
-.campo_texto[type="text"] {
-    display: flex;
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    width: 165px;
-    padding-right: 10px;
-    font-weight: 300;
-}
-
-.campo_texto:focus {
-    outline: none;
-}
-
-.imgAdicionar {
-    width: 25px;
-    height: 25px;
-}
-
-.botaoAdicionar {
-    border: none;
-}
-
-.categorias {
-    display: flex;
-    justify-content: space-between;
-}
-
-.li {
-    list-style: none;
-}
-
-
-
-.lixeira {
     width: 18px;
     height: 20px;
     background-color: var(--borda_cinza);
 }
-
-.botaoDelete {
-    border: none;
-    padding: 0px 0px;
-}
-
-.headerCategoria{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-    background-color: var(--borda_cinza);
-    width: 320px;
-    padding: 20px 20px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    color: var(--background);
-} */

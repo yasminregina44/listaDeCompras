@@ -10,15 +10,121 @@
 :root {
     --background: #f5f5f5;
     --borda_cinza: #474747;
+    --background_cinza: #c7c7c7;
 }
+
+.campoTextoItem[type="text"] {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    width: 165px;
+    padding-right: 10px;
+    font-weight: 300;
+}
+
+.campoTextoItem:focus {
+    outline: none;
+}
+
+.headerItem {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background_cinza);
+    padding: 10px 20px;
+}
+
+.imgAdicionarItem {
+    width: 20px;
+    height: 20px;
+    background-color: var(--background_cinza);
+}
+
+.divItens{
+    background-color: var(--background_cinza);
+    padding: 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.item{
+    list-style: none;
+    background-color: var(--background_cinza);
+}
+
+.imgDeletarItem{
+    width: 20px;
+    height: 20px;
+    background-color: var(--background_cinza);
+}
+
+
+
+
+
+/* 
+
+
+input[type="checkbox"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+ Estilo da checkbox customizada quando marcada 
+input[type="checkbox"]:checked + label::before {
+    background-color: #007bff; /* Cor de fundo quando marcada 
+    border-color: #007bff; /* Cor da borda quando marcada 
+  }
+
+
+
+
+
+
+
+
+
+.li {
+    list-style: none;
+}
+
+
+
+.lixeira {
+    padding-top: 4px;
+    width: 1x;
+    height: 10px;
+}
+
+.botaoDelete {
+    border: none;
+}
+
+
+
+
+ */
+
+/* 
+
+
+ 
 
 .adicionaCategoria {
     display: flex;
-    margin-top: 20px;
+    margin-bottom: 30px;
     border: 1.5px solid var(--borda_cinza);
     border-radius: 10px;
     padding: 10px 12px;
     width: 200px;
+    
 }
 
 .campo_texto[type="text"] {
@@ -36,7 +142,6 @@
 }
 
 .imgAdicionar {
-    padding-top: 4px;
     width: 25px;
     height: 25px;
 }
@@ -54,24 +159,28 @@
     list-style: none;
 }
 
-.tituloCategoria {
-    font-size: 20px;
-    font-weight: 600;
-}
+
 
 .lixeira {
-    padding-top: 4px;
-    width: 1x;
-    height: 10px;
+    width: 18px;
+    height: 20px;
+    background-color: var(--borda_cinza);
 }
 
 .botaoDelete {
     border: none;
+    padding: 0px 0px;
 }
 
-.tituloCategoria{
+.headerCategoria{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
+    margin-bottom: 10px;
+    background-color: var(--borda_cinza);
+    width: 320px;
+    padding: 20px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--background);
+} */

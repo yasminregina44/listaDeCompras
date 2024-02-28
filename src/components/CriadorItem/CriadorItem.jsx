@@ -1,6 +1,7 @@
 import { useState } from "react"
+import "./CriadorItem.css";
 
-export default function CriadorItem ({ id }) {
+export default function CriadorItem({ id }) {
 
     const [listaItem, setListaItem] = useState([]);
     const [nomeItem, setNomeItem] = useState("");
@@ -9,13 +10,13 @@ export default function CriadorItem ({ id }) {
 
     const adicionarItem = () => {
 
-        if(nomeItem.trim() != "") {
+        if (nomeItem.trim() != "") {
             const item = {
                 id: adicionarID(),
                 idCategoria: idItem,
                 value: nomeItem
             }
-    
+
             const novoItem = [...listaItem, item];
             setListaItem(novoItem);
 
@@ -28,15 +29,15 @@ export default function CriadorItem ({ id }) {
         let idAleatorio = Math.floor(Math.random() * 1000);
         console.log("item gerado")
 
-        if(arrayID.includes(idAleatorio) == true) {
+        if (arrayID.includes(idAleatorio) == true) {
             console.log("item repetiu")
             do {
                 idAleatorio = Math.floor(Math.random() * 1000);
-            }while (arrayID.includes(idAleatorio))
+            } while (arrayID.includes(idAleatorio))
         }
 
         setArrayID([...arrayID, idAleatorio]);
-        return(idAleatorio)
+        return (idAleatorio)
     }
 
     const enterKey = (event) => {
@@ -52,19 +53,23 @@ export default function CriadorItem ({ id }) {
 
     return (
         <div>
-            <div>
-                <input type="text" placeholder="Insira a tarefa" value={nomeItem} onInput={event => setNomeItem(event.target.value)} onKeyPress={enterKey} />
-                <button onClick={adicionarItem}>Adicionar Tarefa</button>
+            <div className="headerItem">
+                <input className="campoTextoItem" type="text" placeholder="Adicionar Item" value={nomeItem} onInput={event => setNomeItem(event.target.value)} onKeyPress={enterKey} />
+                <img className="imgAdicionarItem" src="../src/assets/adicionarCinza.png" alt="Adicionar Item" onClick={adicionarItem} />
             </div>
             <div>
-                <ul>
+                <ul className="divItens">
                     {
                         listaItem.length > 0 ? (
                             listaItem.map(item => {
                                 return (
-                                    <li key={item.id}>
-                                        <p>{item.value}</p>
-                                        <button onClick={() => {removerItem(item.id)}}>Deletar Tarefa</button>
+                                    <li className="item" key={item.id}>
+                                        <input type="checkbox" id={`checkbox`} />
+                                        <label htmlFor={`checkbox`}>
+                                            <img src="caminho/para/sua/imagem.png" alt="Checkbox" />
+                                            {item.value}
+                                        </label>
+                                        <img className="imgDeletarItem" src="../src/assets/lixeiraCinza.png" alt="Deletar Item" onClick={() => { removerItem(item.id) }} />
                                     </li>
                                 )
                             })
