@@ -33,6 +33,7 @@
     justify-content: space-between;
     background-color: var(--background_cinza);
     padding: 10px 20px;
+    padding-top: 20px;
 }
 
 .imgAdicionarItem {
@@ -41,25 +42,66 @@
     background-color: var(--background_cinza);
 }
 
-.divItens{
+.divItens {
     background-color: var(--background_cinza);
     padding: 10px 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    margin-bottom: 30px;
 }
 
-.item{
+.item {
     list-style: none;
     background-color: var(--background_cinza);
+    padding: 10px 0px;
+    border-top: 1px solid var(--borda_cinza);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.imgDeletarItem{
+.imgDeletarItem {
     width: 20px;
     height: 20px;
     background-color: var(--background_cinza);
 }
 
+input[type="checkbox"] {
+    display: none;
+}
 
+input[type="checkbox"]+label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    background-image: url('../src/assets/checkboxVazia.png');
+    background-size: cover;
+    margin-right: 10px;
+    background-color: var(--background_cinza);
+}
+
+input[type="checkbox"]:checked+label::before {
+    background-image: url('../src/assets/checkboxFeita.png');
+}
+
+.labelItem {
+    background-color: var(--background_cinza);
+    display: flex;
+    align-items: center;
+}
+
+.imgDeletarItem {
+    width: 17px;
+    height: 19px;
+    background-color: var(--background_cinza);
+}
+
+.mensagemSemItem{
+    padding: 10px 0px;
+    border-top: 1px solid var(--borda_cinza);
+    background-color: var(--background_cinza);
+}
 
 
 

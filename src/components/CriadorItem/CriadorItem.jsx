@@ -59,26 +59,25 @@ export default function CriadorItem({ id }) {
             </div>
             <div>
                 <ul className="divItens">
-                    {
-                        listaItem.length > 0 ? (
-                            listaItem.map(item => {
-                                return (
-                                    <li className="item" key={item.id}>
-                                        <input type="checkbox" id={`checkbox`} />
-                                        <label htmlFor={`checkbox`}>
-                                            <img src="caminho/para/sua/imagem.png" alt="Checkbox" />
-                                            {item.value}
-                                        </label>
-                                        <img className="imgDeletarItem" src="../src/assets/lixeiraCinza.png" alt="Deletar Item" onClick={() => { removerItem(item.id) }} />
-                                    </li>
-                                )
-                            })
-                        ) : (
-                            <div>
-                                <p>Nenhuma tarefa a ser feita!</p>
-                            </div>
-                        )
-                    }
+                    {listaItem.length > 0 ? (
+                        listaItem.map(item => {
+                            const checkboxId = `checkbox-${item.id}`;
+
+                            return (
+                                <li className="item" key={item.id}>
+                                    <div>
+                                        <input type="checkbox" id={checkboxId} />
+                                        <label className="labelItem" htmlFor={checkboxId}>{item.value}</label>
+                                    </div>
+                                    <img className="imgDeletarItem" src="../src/assets/lixeiraCinza.png" alt="Deletar Item" onClick={() => { removerItem(item.id) }} />
+                                </li>
+                            );
+                        })
+                    ) : (
+                        <div>
+                            <p className="mensagemSemItem">Nenhum item adicionado!</p>
+                        </div>
+                    )}
                 </ul>
             </div>
         </div>
