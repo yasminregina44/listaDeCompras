@@ -4,7 +4,9 @@ import CriadorItem from "../CriadorItem/CriadorItem";
 
 export default function Lista() {
 
-    const [lista, setLista] = useState([]);
+    const arraySuporte = JSON.parse(localStorage.getItem('listas')) || [];
+
+    const [lista, setLista] = useState(arraySuporte);
     const [nomeLista, setNomeLista] = useState("");
     const [arrayID, setArrayID] = useState([]);
 
@@ -25,6 +27,10 @@ export default function Lista() {
 
     }
 
+    if (lista) {
+        localStorage.listas = JSON.stringify(lista);
+    }
+
     const removerLista = (i) => {
         const novaLista = lista.filter(item => item.id !== i);
         setLista(novaLista);
@@ -38,7 +44,6 @@ export default function Lista() {
     };
 
     const adicionarID = () => {
-        console.log("Foi chamado")
         let idAleatorio = Math.floor(Math.random() * 1000);
 
         if (arrayID.includes(idAleatorio) == true) {

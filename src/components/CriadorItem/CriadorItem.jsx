@@ -3,7 +3,21 @@ import "./CriadorItem.css";
 
 export default function CriadorItem({ id }) {
 
-    const [listaItem, setListaItem] = useState([]);
+    const arraySuporte = JSON.parse(localStorage.getItem('itens')) || [];
+    var arrayCondicao = [];
+
+    for (let contador = 0; contador < arraySuporte.length; contador++) {
+        if (arraySuporte[contador].idCategoria == id) {
+            console.log(arraySuporte[contador].idCategoria);
+            arrayCondicao.push(arraySuporte[contador]);
+            console.log("ArrayCondicao: ", arrayCondicao)
+        }
+        console.log(arraySuporte[contador].idCategoria);
+    }
+
+    console.log("Array condicaooo: ", arrayCondicao)
+
+    const [listaItem, setListaItem] = useState(arrayCondicao);
     const [nomeItem, setNomeItem] = useState("");
     const idItem = id;
     const [arrayID, setArrayID] = useState([]);
@@ -25,12 +39,14 @@ export default function CriadorItem({ id }) {
 
     }
 
+    if(listaItem) {
+        localStorage.itens = JSON.stringify(listaItem);
+    }
+
     const adicionarID = () => {
         let idAleatorio = Math.floor(Math.random() * 1000);
-        console.log("item gerado")
 
         if (arrayID.includes(idAleatorio) == true) {
-            console.log("item repetiu")
             do {
                 idAleatorio = Math.floor(Math.random() * 1000);
             } while (arrayID.includes(idAleatorio))
